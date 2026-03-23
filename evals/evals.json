@@ -1,0 +1,23 @@
+{
+  "skill_name": "canadian-tax-prep",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm getting ready to file my 2025 Canadian taxes. I work full-time at a company in Mississauga (T4 employee) and I also do some freelance web development on the side — about $30k in contracts last year, mostly Canadian clients. I have a home office that takes up roughly 15% of my house. My documents are in the folder. Can you build me a tax prep Excel workbook I can bring to my accountant?",
+      "expected_output": "Asks profile-gathering questions (province, RRSP/TFSA, home office details, mileage log, etc.), scans the workspace for documents, creates a complete Excel workbook with all relevant sheets (Income, Home Office, Expenses, Tax Summary), fills in what it can find, and flags missing items.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "help me organize my taxes — i'm in BC, retired, just have pension income (CPP + OAS + a company pension T4A) and some GIC interest. also sold some mutual fund units last year so i have a T3. no business, no home office. i just need a clean summary i can show my CPA.",
+      "expected_output": "Adapts to simple profile (no self-employment, no home office). Creates a streamlined workbook with Income Summary, Investments (capital gains from T3 dispositions), and Tax Summary. Does not create unnecessary sheets (home office, T2125 expenses). Asks for NOA and relevant slips.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I run a consulting company (Dataverse Technologies), T4 from my day job at a bank, live in Brampton Ontario. I have a big folder of receipts — fuel, restaurants, gift cards, some insurance payments, a couple of flights. I also have RRSP, TFSA, RESP and did some trading last year (Questrade + Wealthsimple). My home office is about 25% of my house. Please go through everything and build the full tax prep Excel — I want every receipt logged and I want clear flags for anything my CPA needs to review.",
+      "expected_output": "Full profile workbook with all 8 sheets. Auto-scans any Expenses folder present. Logs individual receipts in Sheet 5b with categories and CPA flags (especially gift cards, vehicle, insurance). Flags home office double-counting risk on internet. Creates capital gains section with T5008 detail. Generates numbered CPA question list. No PII stored.",
+      "files": []
+    }
+  ]
+}
